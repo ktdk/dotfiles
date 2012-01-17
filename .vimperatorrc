@@ -1,0 +1,49 @@
+map j 6<C-e>
+map k 6<C-y>
+
+noremap <esc> <C-c>
+
+set hlsearch
+set hintchars=ifjklasdweuocvbnm
+colorscheme sweets
+
+set toolbars=nonavigation,nomenu,noaddons,nobookmarks
+map set toolbars=navigation,menu
+map set toolbars=nonavigation,nomenu
+
+"" hatenabookmark
+javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
+
+" ダウンロードウィンドウを完了後自動で閉じる
+set! browser.download.manager.closeWhenDone=true
+
+" ダウンロード履歴をFirefox終了時に削除
+set! browser.download.manager.retention=1
+
+" キャッシュをHDDからRAMに
+set! browser.cache.disk.enable=false
+set! browser.cache.memory.enable=true
+
+" 単位(KB)
+set! browser.cache.memory.capacity=-1
+
+" ファイルダウンロード完了時のウイルススキャン機能オフ
+set! browser.download.manager.scanWhenDone=false
+
+" アドオンインストール時の待ち時間カット
+set! security.dialog_enable_delay=0
+
+" ページのアクセスキー無効化
+" set! ui.key.generalAccessKey=0
+
+" JavaScriptでのウィンドウ移動・リサイズ拒否
+" set! dom.disable_window_move_resize=true
+
+" JavaScriptのステータスバー操作を無効化
+" set! dom.event.contextmenu.enabled=false
+
+" 画像の多いタブを閉じた時にすぐにメモリ使用量を減らす
+set! image.mem.min_discard_timeout_ms=6000
+
+" 新規タブをバックグラウンドで
+set! browser.tabs.loadDivertedInBackground=true
