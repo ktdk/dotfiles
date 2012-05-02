@@ -21,9 +21,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'mattn/zencoding-vim'
-
-" if html file, read html5 template
-autocmd BufNewFile *.html 0r $HOME/.vim/template/html5.html
+NeoBundle 'vim-scripts/sudo.vim'
 
 imap <C-k> <Plug>(neocomplcache_start_unite_complete)
 
@@ -53,7 +51,6 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_snipetts_dir='~/.vim/snippets'
 let g:neocomplcache_dictionary_filetype_lists = {
 	\ 'default' : '',
-	\ 'java' : $HOME . '/.vim/dict/java.dict',
 	\ 'javascript' : $HOME . '/.vim/dict/javascript.dict',
 	\ 'perl' : $HOME . '/.vim/dict/perl.dict'
 \ }
